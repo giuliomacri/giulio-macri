@@ -1,63 +1,131 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+/* General Reset */
+body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
   color: #333;
-  background-color: #f4f4f4;
-}
-
-.container {
-  display: flex;
-  min-height: 100vh;
-}
-
-.sidebar {
-  background: #333;
-  color: #fff;
-  width: 250px;
-  padding: 2em;
-  text-align: center;
-}
-
-.sidebar h2 {
   margin: 0;
-  font-size: 1.5em;
 }
 
-.sidebar ul {
+/* Hero Section */
+.hero {
+  background: url('images/DSC_3915.jpeg') no-repeat center center/cover;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+.hero-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.hero-button {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.hero-button:hover {
+  background-color: #0056b3;
+}
+
+/* Main Content */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+}
+.card h2 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+/* Education Section */
+.education-item img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.education-item p {
+  margin: 5px 0;
+}
+
+/* Contact Section */
+.contact-list {
   list-style: none;
   padding: 0;
 }
-
-.sidebar ul li {
-  margin: 1em 0;
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
-
-.sidebar ul li a {
-  color: #ddd;
+.contact-list i {
+  font-size: 1.2em;
+  color: #007bff;
+  margin-right: 10px;
+}
+.contact-list a {
+  color: #007bff;
   text-decoration: none;
 }
-
-.sidebar ul li a:hover {
-  color: #fff;
+.contact-list a:hover {
+  text-decoration: underline;
 }
 
-.content {
-  flex: 1;
-  padding: 2em;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.content section {
-  margin-bottom: 2em;
-}
-
-footer {
+/* Footer */
+.footer {
   text-align: center;
-  padding: 1em;
+  padding: 20px;
   background: #333;
-  color: #fff;
-  margin-top: 2em;
+  color: white;
+  margin-top: 40px;
+}
+.footer p {
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
 }
